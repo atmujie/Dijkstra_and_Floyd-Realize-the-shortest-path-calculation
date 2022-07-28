@@ -32,7 +32,8 @@ public class Main {
         File file = new File("src/com/atmujie/data/最短路100.txt");
         readDataFile = new ReadDataFile(file);
         graph = readDataFile.fileToGraph();
-        // Dijstra算法测试
+        // Dijkstra算法测试
+        System.out.println("========Dijkstra算法=======");
         dijkstra = new Dijkstra(graph);
         dijkstra.djs(1);
         int[] shortestDistance = dijkstra.getShortestDistance();
@@ -41,6 +42,7 @@ public class Main {
         }
         System.out.println();
         // Floyd算法测试
+        System.out.println("========Floyd算法=======");
         Floyd floyd = new Floyd(graph);
         floyd.FloydImplementation();
         int[][] res = floyd.getDistanceList();
